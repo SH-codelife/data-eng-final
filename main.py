@@ -11,13 +11,13 @@ from apache_beam.io.gcp.internal.clients import bigquery
 import argparse
 
 options = PipelineOptions(
-    # project="york-cdf-start", #Jenkins will need
-    # region="us-central1", #Jenkins will need
-    temp_location="gs://york_temp_files/tmp",
-    # job_name='sonja-hayden-final-job',
-    # runner="DataflowRunner", #Jenkins will need
-    # staging_locations="gs://york_temp_files/staging",
-    # save_main_session=True
+    project="york-cdf-start", #Jenkins will need
+    region="us-central1", #Jenkins will need
+     temp_location="gs://york_temp_files/tmp",
+    job_name='sonja-hayden-final-job',
+    runner="DataflowRunner", #Jenkins will need
+    staging_locations="gs://york_temp_files/staging",
+    save_main_session=True
 )
 
 if __name__ == '__main__':
