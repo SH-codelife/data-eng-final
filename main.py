@@ -22,14 +22,14 @@ if __name__ == '__main__':
     TABLE_SCHEMA = {  ##  >>>NEED TO cast sku string to INTEGER<<<
         'fields': [
             {'name': 'cust_tier_code', 'type': 'STRING', 'mode': 'REQUIRED'},
-            {'name': 'sku', 'type': 'STRING', 'mode': 'REQUIRED'},
+            {'name': 'sku', 'type': 'INTEGER', 'mode': 'REQUIRED'},
             {'name': 'total_no_of_product_views', 'type': 'INTEGER', 'mode': 'REQUIRED'},
         ]
     }
     ORDERS_SCHEMA = {  ##   >>>NEED TO cast sku string to INTEGER<<<
         'fields': [
             {'name': 'cust_tier_code', 'type': 'STRING', 'mode': 'REQUIRED'},
-            {'name': 'sku', 'type': 'STRING', 'mode': 'REQUIRED'},
+            {'name': 'sku', 'type': 'INTEGER', 'mode': 'REQUIRED'},
             {'name': 'total_sales_amount', 'type': 'FLOAT', 'mode': 'REQUIRED'},
         ]
     }
