@@ -8,7 +8,9 @@ from apache_beam.io import WriteToBigQuery
 from apache_beam.io.gcp.internal.clients import bigquery
 import argparse
 #
-# added comment
+# Data Studio Report #Name: SH Report
+# Url:  https://datastudio.google.com/u/0/reporting/abfaa824-4bce-4e7f-9865-aec6fec10c2d/page/wf7iC
+
 options = PipelineOptions(
     project="york-cdf-start", #Jenkins will need
     region="us-central1", #Jenkins will need
@@ -20,14 +22,14 @@ options = PipelineOptions(
 )
 if __name__ == '__main__':
     # schema for table to write data back into
-    TABLE_SCHEMA = {  ##  >>>NEED TO cast sku string to INTEGER<<<
+    TABLE_SCHEMA = {  ##sku: input type string/output type integer
         'fields': [
             {'name': 'cust_tier_code', 'type': 'STRING', 'mode': 'REQUIRED'},
             {'name': 'sku', 'type': 'INTEGER', 'mode': 'REQUIRED'},
             {'name': 'total_no_of_product_views', 'type': 'INTEGER', 'mode': 'REQUIRED'},
         ]
     }
-    ORDERS_SCHEMA = {  ##   >>>NEED TO cast sku string to INTEGER<<<
+    ORDERS_SCHEMA = {
         'fields': [
             {'name': 'cust_tier_code', 'type': 'STRING', 'mode': 'REQUIRED'},
             {'name': 'sku', 'type': 'INTEGER', 'mode': 'REQUIRED'},
